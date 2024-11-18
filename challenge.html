@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anillo galáctico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>ANILLO GALÁCTICO</h1>
+    </header>
+    <main class="main-container">
+        <section>
+            <h1>Mis Productos</h1>
+            <div data-product class="products-container"></div>
+        </section>
+        <section id="data-product">
+            <h1>Agregar Producto</h1>
+            <form id="form-container" data-form>
+                <input data-name placeholder="Nombre" type="text">
+                <input data-price placeholder="Precio" type="text">
+                <input data-image placeholder="Imagen" type="text">
+                <span data-message class="mensajeError"></span>
+                <div class="button-container">
+                    <button type="submit" class="submit-button">Enviar</button>
+                    <button type="reset" class="clear-button">Limpiar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>DESARROLLADO POR LUNA - 2024</p>
+        <ul class="redes">
+            <li class="redes__img"><a href="https://github.com/FatimaLuna"> <img src="images/github.png" alt="Flecha"></a></li>
+            <li class="redes__img"><a href="https://www.linkedin.com/in/f%C3%A1tima-ruiz-luna/"> <img src="images/linkedin.png" alt="Flecha"></a></li>
+            <li class="redes__img"><a href="https://www.instagram.com/ftmrzln?igsh=NXg2Z2hvcWgxcTIw"> <img src="images/instagram.png" alt="Flecha"></a></li>
+        </ul>
+    </footer>
+    <script type="module" src="js/controllers/main.js"></script>
+</body>
+</html>

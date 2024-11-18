@@ -1,0 +1,243 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #4A148C;
+    color: #FFFFFF;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    background-color: #4A148C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 10px;
+    box-sizing: border-box;
+}
+
+.main-container {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 20px 0;
+    gap: 20px; /* Añadimos un gap para separar las secciones */
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.products-section,
+.form-section {
+    flex: 1; /* Ambas secciones ocuparán el mismo espacio */
+}
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 productos en fila en desktop */
+    gap: 20px;
+    width: 100%;
+}
+
+.product-card {
+    background-color: #6A1B9A;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.img-container {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Asegura que la imagen no se salga del contenedor */
+}
+
+.img-container img {
+    width: auto;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
+    border-radius: 10px;
+}
+
+.card-container--info {
+    background-color: #6A1B9A;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.card-container--value {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex;
+    margin-top: 10px;
+    gap: 30px; /* Añade un gap para separar los elementos */
+}
+
+
+
+.delete-button {
+    background-color: #5389fd;
+    border: none;
+    color: #FFFFFF;
+    padding: 5px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#data-product {
+    text-align: center;
+    width: 100%;
+    max-width: 400px; /* Asegura que el formulario no sea demasiado ancho */
+}
+
+#form-container {
+    background-color: #6A1B9A;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#form-container input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.submit-button {
+    background-color: #b804c9;
+    border: none;
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.clear-button {
+    background-color: #880194;
+    border: none;
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    width: 100%;
+    background-color: #6A1B9A;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinea los elementos al centro horizontalmente */
+    text-align: center;
+    font-size: 0.6rem; /* Tamaño de la fuente más pequeño */
+    line-height: 0; /* Reduce el interlineado */
+    padding: 10px 0;
+    position:static;
+}
+
+.redes {
+    list-style: none;
+    display: flex;
+    gap: 15px; /* Espacio entre los elementos de la lista */
+    align-items: center;
+    justify-content: center; /* Alinea los ítems al centro horizontalmente */
+    padding: 0; /* Remueve cualquier padding predeterminado */
+    margin: 10px 0 0 0; /* Añade margen para separar los elementos de otros contenidos */
+}
+
+.redes__img {
+    display: flex;
+    align-items: center;
+}
+
+.redes__img img {
+    width: 20px; /* Tamaño pequeño para los logotipos */
+    height: 20px;
+    margin-left: 8px;
+}
+
+.redes__img a:hover img {
+    transform: scale(1.6); /* Efecto hover para ampliar ligeramente el logo */
+    transition: transform 0.2s ease;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        justify-content: center;
+    }
+
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .products-section,
+    .form-section {
+        width: 100%;
+    }
+
+    .products-container {
+        grid-template-columns: 1fr; /* Un producto por fila en dispositivos móviles */
+        width: 100%;
+    }
+
+    .product-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-container {
+        height: 150px;
+    }
+
+    .card-container--info {
+        width: 100%;
+    }
+
+    .card-container--value {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .submit-button, .clear-button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .submit-button:last-child, .clear-button:last-child {
+        margin-bottom: 0;
+    }
+
+    footer {
+        position: static;
+        padding: 20px 0;
+    }
+}
